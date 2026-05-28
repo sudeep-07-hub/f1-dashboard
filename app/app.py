@@ -15,7 +15,7 @@ st.markdown('### Exploring race pace, tyre strategy and team performance')
 
 @st.cache_data
 def load_data():
-    fastf1.Cache.enable_cache('/Users/sukesh/Desktop/f1-dashboard/data/f1_cache')
+    fastf1.Cache.enable_cache('data/f1_cache')
     session = fastf1.get_session(2023, 'Italy', 'R')
     session.load()
     laps = session.laps.pick_quicklaps()
